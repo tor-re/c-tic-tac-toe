@@ -72,9 +72,9 @@ int main()
             printf("win %s", turn);
         } else if(board[0] == turn && board[4] == turn && board[8] == turn){
             gamerunning = 0;
-            board[0] = ".";
-            board[4] = ".";
-            board[8] = ".";
+            board[0] = "\\";
+            board[4] = "\\";
+            board[8] = "\\";
             printf("\n");
             printboard(9, board);
             printf("win %s", turn);
