@@ -13,13 +13,15 @@ void printboard(int a, char *arr[a]){
 }
 int main()
 {
+    char line[10];
     int space = 0, gamerunning = 1;
     char *turn = "X";
     char *board[9] = {"□","□","□","□","□","□","□","□","□"};
     while(gamerunning){
         printboard(9, board);
         printf("player %s please enter a space [1 - 9]: ", turn);
-        scanf("%d", &space);
+        fgets(line, sizeof(line), stdin);
+        sscanf(line, "%d", &space);
         if(board[space-1] == "□"){
             board[space - 1] = turn;
         }
